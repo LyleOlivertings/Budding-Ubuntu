@@ -17,3 +17,8 @@ export async function getMembersCollection() {
   const client = await connectToDatabase()
   return client.db(dbName).collection('members')
 }
+
+export async function getProductsCollection() {
+  const client = await connectToDatabase()
+  return client.db(process.env.MONGODB_DB).collection('products')
+}

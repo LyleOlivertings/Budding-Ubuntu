@@ -14,7 +14,7 @@ export async function middleware(request: any) {
 
   // Redirect logged-in admins from login page
   if (pathname === '/admin/login' && token) {
-    return NextResponse.redirect(new URL('/admin/dashboard', request.url))
+    return NextResponse.redirect(new URL('/admin', request.url))
   }
 
   return NextResponse.next()
